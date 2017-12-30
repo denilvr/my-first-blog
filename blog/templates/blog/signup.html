@@ -1,0 +1,28 @@
+
+
+{% extends '../blog/base.html' %}
+
+{% block content %}
+<div class="row" >
+<div class="col-md-2"></div>
+            <div class="col-md-8">
+              
+                <h2 style="font-family:Roboto;text-transform:uppercase;margin-top:40px;">Sign Up</h2>
+              
+  <form method="post">
+    {% csrf_token %}
+        {% include 'includes/bs4_form.html' with form=form %}
+    <button class="btn btn-primary">Submit</button>
+  </form>
+
+
+   </div>
+<div class="col-md-2"></div>
+
+</div>
+
+
+
+
+
+{% endblock %}

@@ -17,3 +17,10 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Comments(models.Model):
+    author = models.ForeignKey('auth.User')
+    post = models.ForeignKey('Post')
+    text = models.CharField(max_length=200)
+
+   
